@@ -14,11 +14,10 @@
 </head>
 <body>
   <h1>Live oceny Filmweb</h1>
-  <p class="muted">èrÛd≥o: publicznie dostÍpne strony Filmweb. Odúwieøane cyklicznie.</p>
 
   <table id="tbl">
     <thead>
-      <tr><th>Tytu≥</th><th>Ocena</th><th>G≥osy</th><th>Aktualizacja</th></tr>
+      <tr><th>Tytu≈Ç</th><th>Ocena</th><th>G≈Çosy</th><th>Aktualizacja</th></tr>
     </thead>
     <tbody></tbody>
   </table>
@@ -33,9 +32,9 @@
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td><a href="${row.url}" target="_blank" rel="noopener noreferrer">${row.title}</a></td>
-          <td>${row.rating ?? "ó"}</td>
-          <td>${row.votes ? Number(row.votes).toLocaleString("pl-PL") : "ó"}</td>
-          <td>${row.ts ? new Date(row.ts).toLocaleString("pl-PL") : "ó"}</td>
+          <td>${row.rating ?? "ÔøΩ"}</td>
+          <td>${row.votes ? Number(row.votes).toLocaleString("pl-PL") : "ÔøΩ"}</td>
+          <td>${row.ts ? new Date(row.ts).toLocaleString("pl-PL") : "ÔøΩ"}</td>
         `;
         tbody.appendChild(tr);
       }
