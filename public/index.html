@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live oceny Filmweb</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background: #f5f5f5; }
+    .muted { color: #666; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>Live oceny Filmweb</h1>
+  <p class="muted">èrÛd≥o: publicznie dostÍpne strony Filmweb. Odúwieøane cyklicznie.</p>
+
+  <table id="tbl">
+    <thead>
+      <tr><th>Tytu≥</th><th>Ocena</th><th>G≥osy</th><th>Aktualizacja</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    async function load() {
+      const res = await fetch("./ratings.json", { cache: "no-store" });
+      const data = await res.json();
+      const tbody = document.querySelector("#tbl tbody");
+      tbody.innerHTML = "";
+      for (const row of data) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><a href="${row.url}" target="_blank" rel="noopener noreferrer">${row.title}</a></td>
+          <td>${row.rating ?? "ó"}</td>
+          <td>${row.votes ? Number(row.votes).toLocaleString("pl-PL") : "ó"}</td>
+          <td>${row.ts ? new Date(row.ts).toLocaleString("pl-PL") : "ó"}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+    load();
+    setInterval(load, 60000);
+  </script>
+</body>
+</html>
