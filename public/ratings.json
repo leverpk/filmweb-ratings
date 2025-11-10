@@ -4,7 +4,7 @@
     "url": "https://www.filmweb.pl/film/Skazani+na+Shawshank-1994-1048",
     "rating": null,
     "votes": null,
-    "ts": 1762752279336,
+    "ts": 1762756655857,
     "error": "TimeoutError: page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.filmweb.pl/film/Skazani+na+Shawshank-1994-1048\", waiting until \"domcontentloaded\"\n"
   },
   {
@@ -12,6 +12,6 @@
     "url": "https://www.filmweb.pl/film/Incepcja-2010-500891",
     "rating": "8,2  650 tys. ocen",
     "votes": "650",
-    "ts": 1762752284658
+    "ts": 1762756661177
   }
 ]
