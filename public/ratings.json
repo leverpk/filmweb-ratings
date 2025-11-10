@@ -2,15 +2,16 @@
   {
     "title": "Skazani na Shawshank",
     "url": "https://www.filmweb.pl/film/Skazani+na+Shawshank-1994-1048",
-    "rating": "8,8  965 tys. ocen",
-    "votes": "965",
-    "ts": 1762739748455
+    "rating": null,
+    "votes": null,
+    "ts": 1762744982722,
+    "error": "TimeoutError: page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.filmweb.pl/film/Skazani+na+Shawshank-1994-1048\", waiting until \"domcontentloaded\"\n"
   },
   {
     "title": "Incepcja",
     "url": "https://www.filmweb.pl/film/Incepcja-2010-500891",
     "rating": "8,2  650 tys. ocen",
     "votes": "650",
-    "ts": 1762739753902
+    "ts": 1762744988042
   }
 ]
